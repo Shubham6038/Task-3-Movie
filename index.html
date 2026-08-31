@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineExplore | Movie Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-container" class="auth-wrapper hidden">
+        <div class="auth-card">
+            <h2 id="auth-title">Welcome to CineExplore</h2>
+            <form id="auth-form">
+                <input type="email" id="auth-email" placeholder="Email Address" required>
+                <input type="password" id="auth-password" placeholder="Password" required>
+                <button type="submit" id="auth-submit-btn">Login</button>
+            </form>
+            <p id="auth-toggle-text">Don't have an account? <span id="auth-switch">Register here</span></p>
+        </div>
+    </div>
+
+    <div id="app-container">
+        <header>
+            <div class="logo" id="nav-logo">🎬 CineExplore</div>
+            <nav>
+                <button id="nav-home" class="nav-btn active">Home</button>
+                <button id="nav-fav" class="nav-btn">❤️ Favorites</button>
+                <button id="theme-toggle" class="theme-btn">🌓 Mode</button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="controls-panel" id="controls-panel">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search movies by title...">
+                    <button id="search-btn">Search</button>
+                </div>
+                
+                <div class="filter-sort-row">
+                    <select id="genre-filter">
+                        <option value="">All Genres</option>
+                    </select>
+                    <select id="year-filter">
+                        <option value="">All Years</option>
+                    </select>
+                    
+                    <select id="movie-sort">
+                        <option value="">Sort By</option>
+                        <option value="rating-desc">Rating: High to Low</option>
+                        <option value="date-desc">Release: Newest First</option>
+                        <option value="alpha-asc">Alphabetical (A-Z)</option>
+                    </select>
+                </div>
+            </section>
+
+            <h2 class="section-heading" id="content-title">Trending Movies</h2>
+            <div class="movie-grid" id="movie-display-grid">
+                </div>
+        </main>
+    </div>
+
+    <div class="modal" id="movie-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal-btn">&times;</span>
+            <div id="modal-data-body">
+                </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
